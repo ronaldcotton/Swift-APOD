@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="APOD_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Adh-TU-WwE">
+                                <rect key="frame" x="8" y="58" width="359" height="214"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="214" id="YtO-Ji-BDX"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtU-0i-88q">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="fc8-GW-klj">
+                                        <rect key="frame" x="20" y="20" width="89" height="30"/>
+                                        <state key="normal" title="Choose Date"/>
+                                        <connections>
+                                            <action selector="APODTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="biC-7H-ZAn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7yn-PY-g5v"/>
+                                    <constraint firstItem="fc8-GW-klj" firstAttribute="leading" secondItem="vtU-0i-88q" secondAttribute="leading" constant="20" id="der-bN-WHg"/>
+                                    <constraint firstItem="fc8-GW-klj" firstAttribute="top" secondItem="vtU-0i-88q" secondAttribute="top" constant="20" id="zh9-gX-n5c"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ysS-u4-PaK">
+                                <rect key="frame" x="8" y="280" width="359" height="379"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Adh-TU-WwE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Deb-GP-wb8"/>
+                            <constraint firstItem="ysS-u4-PaK" firstAttribute="top" secondItem="Adh-TU-WwE" secondAttribute="bottom" constant="8" id="Gbc-RG-F2f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ysS-u4-PaK" secondAttribute="trailing" constant="8" id="P9C-F1-o5E"/>
+                            <constraint firstItem="vtU-0i-88q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PPP-GK-InN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ysS-u4-PaK" secondAttribute="bottom" constant="8" id="RmD-MF-WRp"/>
+                            <constraint firstItem="Adh-TU-WwE" firstAttribute="top" secondItem="vtU-0i-88q" secondAttribute="bottom" constant="8" id="SHe-Ci-xLv"/>
+                            <constraint firstItem="ysS-u4-PaK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Tyt-6w-K3L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Adh-TU-WwE" secondAttribute="trailing" constant="8" id="UIT-eU-Yf2"/>
+                            <constraint firstItem="vtU-0i-88q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bdc-54-pY3"/>
+                            <constraint firstItem="vtU-0i-88q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i6H-RH-rMG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="TextBox" destination="ysS-u4-PaK" id="6ft-mq-TJ0"/>
+                        <outlet property="ViewImage" destination="Adh-TU-WwE" id="sFG-r7-Nkf"/>
+                        <segue destination="5b5-CL-l15" kind="presentation" identifier="pickDate" id="VyS-Mt-GCI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="32.833583208395808"/>
+        </scene>
+        <!--Date Picker View Controller-->
+        <scene sceneID="acP-Gr-72z">
+            <objects>
+                <viewController id="5b5-CL-l15" customClass="datePickerViewController" customModule="APOD_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c1z-ph-DqO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="nUv-fi-Bqe">
+                                <rect key="frame" x="27.5" y="225" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="546113892.38266504">
+                                    <!--2018-04-22 18:18:12 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-175010400">
+                                    <!--1995-06-16 10:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="APODChanged:" destination="5b5-CL-l15" eventType="valueChanged" id="zki-KL-M6u"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdr-Je-fmZ">
+                                <rect key="frame" x="50" y="461" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelAPODDatePicker:" destination="5b5-CL-l15" eventType="touchUpInside" id="6Kf-HA-dYW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUf-TJ-azV">
+                                <rect key="frame" x="276" y="461" width="49" height="30"/>
+                                <state key="normal" title="Accept"/>
+                                <connections>
+                                    <action selector="OkAPODDatePicker:" destination="5b5-CL-l15" eventType="touchUpInside" id="jP8-SY-Naf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nUv-fi-Bqe" firstAttribute="centerX" secondItem="c1z-ph-DqO" secondAttribute="centerX" id="Iw8-p8-GOA"/>
+                            <constraint firstItem="pUf-TJ-azV" firstAttribute="top" secondItem="nUv-fi-Bqe" secondAttribute="bottom" constant="20" id="Nqg-q7-djQ"/>
+                            <constraint firstItem="sdr-Je-fmZ" firstAttribute="top" secondItem="nUv-fi-Bqe" secondAttribute="bottom" constant="20" id="ZhE-Wg-dAi"/>
+                            <constraint firstItem="FUy-8f-Osj" firstAttribute="trailing" secondItem="pUf-TJ-azV" secondAttribute="trailing" constant="50" id="rs5-06-gsy"/>
+                            <constraint firstItem="sdr-Je-fmZ" firstAttribute="leading" secondItem="FUy-8f-Osj" secondAttribute="leading" constant="50" id="spY-kv-C3r"/>
+                            <constraint firstItem="nUv-fi-Bqe" firstAttribute="centerY" secondItem="c1z-ph-DqO" secondAttribute="centerY" id="t6f-Nf-AlY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FUy-8f-Osj"/>
+                    </view>
+                    <connections>
+                        <outlet property="APODdate" destination="nUv-fi-Bqe" id="gB2-YU-N8z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oj8-cf-uEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861.60000000000002" y="32.833583208395808"/>
+        </scene>
+    </scenes>
+</document>
